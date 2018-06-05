@@ -216,25 +216,25 @@ footer h3 {
 }
 
 @media (max-width: 500px) {
+    .category-box{
+        background: lightgray;
+        border-left: darkorange 2px solid;
+        padding: 15px;
+        font-size: 20px;
+        -webkit-transition: width 2s; /* Safari */
+        transition: width 2s;
+        width: 100%;
+    }
+
+    .category-box:hover{
+        width: 60%;
+    }
+
     .featured, .recommended{
         grid-template-columns: repeat(1,1fr);
     }
 
     .category{
         grid-template-columns: repeat(1,1fr);
-    }
-}
-
-@media (max-width: 350px) {
-    .banner{
-        background: url('../banner-mobile.jpg');
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 88.5vh;
-        margin: 0;
-        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(80%);
     }
 }
