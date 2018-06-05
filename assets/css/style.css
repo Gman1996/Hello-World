@@ -1,0 +1,240 @@
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+    animation-duration: 1.3s;
+}
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+
+@keyframes come-in {
+    to { transform: translateY(0); }
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background: #fff;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 30px;
+    padding-left: 12%;
+}
+
+.nav-grid{
+    padding-left: 4px;
+    color: darkgray;
+    font-size: 20px;
+    border-left: darkorange 2px solid;
+    justify-content: right;
+}
+
+.nav-grid:hover{
+    color: black;
+    font-size: 23px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.banner{
+    background: url('../banner.jpg');
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 88.5vh;
+    margin: 0;
+    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
+}
+
+.inner-text{
+    text-align: center;
+    color: white;
+    padding: 20% 0;
+    font-size: 20px;
+}
+
+.featured, .recommended{
+    padding: 10px;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.featured img, .recommended img{
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.featured-box, .recommended-box{
+    border: lightgray 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.details{
+    background: darkorange;
+    color: white;
+    padding: 13px;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.title{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: black 2px solid;
+    color: darkorange;
+}
+
+.seperate{
+    border-top: lightgray 2px solid;
+}
+
+.category-box{
+    background: lightgray;
+    border-left: darkorange 2px solid;
+    padding: 15px;
+    font-size: 20px;
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+    width: 50%;
+}
+
+.category{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.category-seperate{
+    padding-top: 10px;
+    background: #eeeeee;
+}
+
+.category-seperate, .seperate{
+    padding: 40px 40px;
+}
+
+.category-box:hover{
+    width: 120px;
+}
+
+footer {
+    border-top: white 2px solid;
+    background: #eeeeee;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+}
+
+footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    transition: background 500ms ease;
+}
+
+.btn:hover {
+    background: black;
+}
+
+/*Media Queries*/
+@media (max-width: 850px) {
+    .banner{
+        background: url('../banner-small.jpg');
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 88.5vh;
+        margin: 0;
+        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(80%);
+    }
+
+    .burger{
+        height: 5px;
+        border-bottom: #333333 4px solid;
+        width: 35px;
+        margin: 3px 10px;
+    }
+
+    .burger-parent{
+        padding: 15px;
+    }
+
+    nav{
+        display: none;
+        padding: 0;
+    }
+
+    .nav-grid{
+        border-bottom: darkorange 2px solid;
+        padding: 10px;
+        border-left: none;
+        margin: 10px;
+    }
+
+    .featured, .recommended{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .details{
+        padding: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .featured, .recommended{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .category{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .banner{
+        background: url('../banner-mobile.jpg');
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 88.5vh;
+        margin: 0;
+        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(80%);
+    }
+}
