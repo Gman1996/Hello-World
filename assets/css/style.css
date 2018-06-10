@@ -47,15 +47,19 @@ a{
 }
 
 .banner{
-    background: url('../banner.jpg');
+    background: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                )
+                ,url('../banner.jpg');
     width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 88.5vh;
     margin: 0;
-    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(80%);
+    //-webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(80%);
 }
 
 .inner-text{
@@ -172,15 +176,17 @@ footer h3 {
 /*Media Queries*/
 @media (max-width: 850px) {
     .banner{
-        background: url('../banner-small.jpg');
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+        )
+        ,url('../banner-small.jpg');
         width: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 88.5vh;
         margin: 0;
-        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(80%);
     }
 
     .burger{
